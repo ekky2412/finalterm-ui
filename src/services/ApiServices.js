@@ -2,7 +2,7 @@ import dotenv from "dotenv";
 dotenv.config();
 
 console.log(process.env);
-const API_URL = process.env.API_URL;
+const API_URL = import.meta.env.API_URL;
 
 export async function getAllVideos() {
   const response = await fetch(`${API_URL}/api/v1/videos/thumbnail`);
