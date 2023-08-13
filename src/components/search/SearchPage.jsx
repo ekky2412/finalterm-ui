@@ -1,5 +1,10 @@
 import { React, useEffect, useState } from "react";
-import { Input, InputGroup, InputLeftElement } from "@chakra-ui/react";
+import {
+  Input,
+  InputGroup,
+  InputLeftElement,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import { SearchIcon } from "@chakra-ui/icons";
 import { getVideoByTitle } from "../../services/ApiServices";
 import VideoCard from "../main/VideoCard";
