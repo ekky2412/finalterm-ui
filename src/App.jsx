@@ -5,6 +5,8 @@ import VideoDetail from "./components/video-detail/VideoDetail";
 import Main from "./components/main/Main";
 import SearchPage from "./components/search/SearchPage";
 const App = () => {
+  console.log(process.env.VITE_API_URL);
+  console.log(import.meta.env.API_URL);
   return (
     <div>
       <Router>
