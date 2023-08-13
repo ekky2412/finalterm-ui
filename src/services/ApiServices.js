@@ -1,17 +1,22 @@
+import dotenv from "dotenv";
+dotenv.config();
+
+const API_URL = process.env.PORT;
+
 export async function getAllVideos() {
-  const response = await fetch("/api/v1/videos/thumbnail");
+  const response = await fetch(`${API_URL}/api/v1/videos/thumbnail`);
   console.log(response);
   return await response.json();
 }
 
 export async function getVideo(videoId) {
-  const response = await fetch(`/api/v1/video/${videoId}`);
+  const response = await fetch(`${API_URL}/api/v1/video/${videoId}`);
   return await response.json();
 }
 
 export async function postComment(data, videoID) {
   console.log(data);
-  const response = await fetch(`/api/v1/comments/${videoID}`, {
+  const response = await fetch(`${API_URL}/api/v1/comments/${videoID}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify(data),
@@ -20,11 +25,11 @@ export async function postComment(data, videoID) {
 }
 
 export async function getComments(videoId) {
-  const response = await fetch(`/api/v1/comments/${videoId}`);
+  const response = await fetch(`${API_URL}/api/v1/comments/${videoId}`);
   return await response.json();
 }
 
 export async function getProducts(videoId) {
-  const response = await fetch(`/api/v1/products/${videoId}`);
+  const response = await fetch(`${API_URL}/api/v1/products/${videoId}`);
   return await response.json();
 }
