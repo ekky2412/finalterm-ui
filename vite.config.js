@@ -10,8 +10,8 @@ export default ({ mode }) => {
     server: {
       host: true,
     },
-    define: {
-      __APP_ENV__: JSON.stringify(env.APP_ENV),
-    },
+    // define: {
+    //   __APP_ENV__: JSON.stringify(env.APP_ENV),
+    // },
   });
 };
