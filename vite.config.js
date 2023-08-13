@@ -1,14 +1,14 @@
 import { defineConfig } from "vite";
-import "dotenv/config";
 import react from "@vitejs/plugin-react";
 
-// https://vitejs.dev/config/
-export default defineConfig({
-  plugins: [react()],
-  server: {
-    host: true,
-  },
-  define: {
-    "process.env.VITE_API_URL": `"${process.env.VITE_API_URL}"`,
-  },
-});
+export default ({ mode }) => {
+  require("dotenv").config({ path: `./.env.${mode}` });
+  // now you can access config with process.env.{configName}
+
+  return defineConfig({
+    plugins: [react()],
+    server: {
+      host: true,
+    },
+  });
+};
