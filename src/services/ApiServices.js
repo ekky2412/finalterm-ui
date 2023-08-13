@@ -1,6 +1,7 @@
 import dotenv from "dotenv";
 dotenv.config();
 
+console.log(process.env);
 const API_URL = process.env.API_URL;
 
 export async function getAllVideos() {
