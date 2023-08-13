@@ -8,7 +8,7 @@
     "build": "vite build",
     "lint": "eslint . --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "start": "vite build && vite --host"
+    "start": "vite build && serve dist -s -n -L -p $PORT"
   },
   "proxy": "http://localhost:80",
   "dependencies": {
@@ -19,7 +19,8 @@
     "framer-motion": "^10.15.1",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-router-dom": "5.3.3"
+    "react-router-dom": "5.3.3",
+    "serve": "^14.2.0"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",
