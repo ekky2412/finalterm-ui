@@ -1,6 +1,6 @@
-console.log(VITE_API_URL);
-
 export async function getAllVideos() {
+  console.log(VITE_API_URL);
+  console.log(process.env.VITE_API_URL);
   const response = await fetch(`${VITE_API_URL}/api/v1/videos/thumbnail`);
   console.log(response);
   return await response.json();
