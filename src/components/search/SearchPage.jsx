@@ -12,22 +12,21 @@ import VideoCard from "../main/VideoCard";
 const SearchPage = () => {
   const [search, setSearch] = useState([]);
   const [videos, setVideos] = useState([]);
+  let videosCard;
   useEffect(() => {
     getVideoByTitle(search).then((videos) => {
       setVideos(videos);
     });
+    if (videos.message === "Video not found!") {
+      const videosCard = "";
+    } else {
+      const videosCard = videos.map((video, index) => VideoRow(video, index));
+    }
   }, [search]);
 
   const VideoRow = (video, index) => {
     return <VideoCard key={index} video={video}></VideoCard>;
   };
-
-  let videosCard;
-  if (videos.message === "Video not found!") {
-    const videosCard = "";
-  } else {
-    const videosCard = videos.map((video, index) => VideoRow(video, index));
-  }
 
   return (
     <div>
