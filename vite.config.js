@@ -5,7 +5,7 @@ import react from "@vitejs/plugin-react";
 export default ({ mode }) => {
   // process.env = { ...process.env, ...loadEnv(mode, process.cwd(), "") };
   return defineConfig({
-    plugins: [react(), EnvironmentPlugin(["VITE_API_URL"])],
+    plugins: [react(), EnvironmentPlugin(["API_URL"])],
     server: {
       host: true,
     },
