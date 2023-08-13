@@ -1,11 +1,11 @@
 import { defineConfig, loadEnv } from "vite";
-import envCompatible from "vite-plugin-env-compatible";
+import EnvironmentPlugin from "vite-plugin-environment";
 import react from "@vitejs/plugin-react";
 
 export default ({ mode }) => {
   // process.env = { ...process.env, ...loadEnv(mode, process.cwd(), "") };
   return defineConfig({
-    plugins: [react(), envCompatible()],
+    plugins: [react(), EnvironmentPlugin(["VITE_API_URL"])],
     server: {
       host: true,
     },
