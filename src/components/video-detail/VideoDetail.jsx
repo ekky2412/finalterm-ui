@@ -68,7 +68,7 @@ const VideoDetail = () => {
     <SimpleGrid spacing={5} columns={3} px={5} mx="auto" height={"100%"}>
       <Box
         column={1}
-        maxHeight="80%"
+        maxHeight="60%"
         overflowY="auto"
         css={{
           "&::-webkit-scrollbar": { width: "4px" },
