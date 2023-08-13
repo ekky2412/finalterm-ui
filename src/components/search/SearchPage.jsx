@@ -16,17 +16,22 @@ const SearchPage = () => {
     getVideoByTitle(search).then((videos) => {
       setVideos(videos);
     });
-  }, [videos]);
+  }, [search]);
 
   const VideoRow = (video, index) => {
     return <VideoCard key={index} video={video}></VideoCard>;
   };
 
-  const videosCard = videos.map((video, index) => VideoRow(video, index));
+  let videosCard;
+  if (videos.message === "Video not found!") {
+    const videosCard = "";
+  } else {
+    const videosCard = videos.map((video, index) => VideoRow(video, index));
+  }
 
   return (
     <div>
-      <InputGroup size="lg">
+      <InputGroup size="lg" mb={3}>
         <InputLeftElement>
           <SearchIcon></SearchIcon>
         </InputLeftElement>
