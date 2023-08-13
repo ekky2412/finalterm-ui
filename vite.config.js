@@ -7,4 +7,7 @@ export default defineConfig({
   server: {
     host: true,
   },
+  define: {
+    "process.env.VITE_API_URL": `"${process.env.VITE_API_URL}"`,
+  },
 });
