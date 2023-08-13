@@ -65,7 +65,7 @@ const VideoDetail = () => {
   );
 
   return (
-    <SimpleGrid spacing={5} columns={3} px={5} mx="auto" height={"100%"}>
+    <SimpleGrid spacing={5} columns={3} px={5} mx="auto" height={"50vw"}>
       <Box
         column={1}
         maxHeight="60%"

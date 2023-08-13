@@ -13,6 +13,11 @@ export async function getVideo(videoId) {
   return await response.json();
 }
 
+export async function getVideoByTitle(title) {
+  const response = await fetch(`${process.env.API_URL}/api/v1/search/${title}`);
+  return await response.json();
+}
+
 export async function postComment(data, videoID) {
   console.log(data);
   const response = await fetch(
