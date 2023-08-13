@@ -18,11 +18,11 @@ const SearchPage = () => {
     });
   }, [search]);
 
-  const VideoRow = (video, index) => {
-    return <VideoCard key={index} video={video}></VideoCard>;
-  };
+  //   const VideoRow = (video, index) => {
+  //     return <VideoCard key={index} video={video}></VideoCard>;
+  //   };
 
-  const videosCard = videos.map((video, index) => VideoRow(video, index));
+  //   const videosCard = videos.map((video, index) => VideoRow(video, index));
 
   return (
     <div>
@@ -36,13 +36,13 @@ const SearchPage = () => {
         ></Input>
       </InputGroup>
       <div>
-        <SimpleGrid
+        {/* <SimpleGrid
           spacing={5}
           columns={3}
           templateColumns="repeat(auto-fill, minmax(200px, 1fr))"
         >
           {videosCard}
-        </SimpleGrid>
+        </SimpleGrid> */}
       </div>
     </div>
   );
