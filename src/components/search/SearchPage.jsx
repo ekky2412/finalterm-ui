@@ -23,10 +23,8 @@ const SearchPage = () => {
     return <VideoCard key={index} video={video}></VideoCard>;
   };
 
-  const videosCard =
-    videos.length() > 0
-      ? videos.map((video, index) => VideoRow(video, index))
-      : "";
+  const videosCard = videos.map((video, index) => VideoRow(video, index));
+
   return (
     <div>
       <InputGroup size="lg" mb={3}>
