@@ -16,7 +16,7 @@ const SearchPage = () => {
     getVideoByTitle(search).then((videos) => {
       setVideos(videos);
     });
-  }, [search]);
+  }, [videos]);
 
   const VideoRow = (video, index) => {
     return <VideoCard key={index} video={video}></VideoCard>;
