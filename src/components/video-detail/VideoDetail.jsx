@@ -36,28 +36,7 @@ const VideoDetail = () => {
       console.log(comments);
       setComments(comments);
     });
-  }, []);
-
-  useEffect(() => {
-    getVideo(id).then((video) => {
-      setVideo({
-        ...video,
-        urlVideo: video.urlVideo.replace("/watch?v=", "/embed/"),
-      });
-    });
-
-    getProducts(id).then((products) => {
-      console.log(products);
-      setProducts(products);
-    });
-  }, [products, video]);
-
-  useEffect(() => {
-    getComments(id).then((comments) => {
-      // console.log(comments);
-      setComments(comments);
-    });
-  }, [comments]);
+  }, [products, video, comments]);
 
   function handleSendComments() {
     const newComment = {
