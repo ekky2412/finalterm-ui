@@ -32,6 +32,7 @@ const SearchPage = () => {
           <SearchIcon></SearchIcon>
         </InputLeftElement>
         <Input
+          borderColor="blackAlpha.800"
           onChange={(e) => setSearch(e.target.value)}
           placeholder="Search Video ..."
         ></Input>

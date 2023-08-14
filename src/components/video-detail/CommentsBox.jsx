@@ -16,7 +16,7 @@ const CommentsBox = ({
       w="100%"
       flexDirection="column"
       mx="auto"
-      maxH="80%"
+      maxHeight="60%"
     >
       <Header></Header>
       <Divider></Divider>

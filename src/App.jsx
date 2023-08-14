@@ -14,13 +14,27 @@ const App = () => {
           colorScheme="facebook"
           style={{ padding: "10px" }}
         >
-          <TabList as={Link} to="/">
-            <Tab>Home</Tab>
-          </TabList>
-          <TabList as={Link} to="/search">
-            <Tab>Search</Tab>
-          </TabList>
-
+          <Box textAlign={"center"}>
+            <div style={{ display: "inline-flex", textAlign: "center" }}>
+              <span
+                style={{
+                  marginRight: "10px",
+                  width: "8vw",
+                  display: "inline-flex",
+                }}
+              >
+                <img src="../logo.png" alt="" />
+              </span>
+              <div style={{ justifyContent: "end" }}>
+                <h1 style={{ fontSize: "3vw" }}>Youtube Play</h1>
+              </div>
+            </div>
+            <TabList as={Link} to="/">
+              <Tab>Home</Tab>
+              <Tab>Search</Tab>
+            </TabList>
+            <TabList as={Link} to="/search"></TabList>
+          </Box>
           <Switch>
             <TabPanels>
               <TabPanel>

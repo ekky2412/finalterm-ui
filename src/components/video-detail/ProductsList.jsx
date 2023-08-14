@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import {
   Card,
   CardBody,
@@ -10,9 +10,21 @@ import {
   CardFooter,
   ButtonGroup,
   Button,
+  Link,
 } from "@chakra-ui/react";
+import { withRouter } from "react-router-dom";
 
 const ProductsList = ({ product }) => {
+  const [productLink, setProductLink] = useState([]);
+
+  useEffect(() => {
+    setProductLink(product.linkProduct);
+  });
+
+  const routeChange = () => {
+    window.open(productLink, "_blank");
+  };
+
   return (
     <Card
       p={5}
@@ -36,6 +48,9 @@ const ProductsList = ({ product }) => {
           <Text color="blue.600" fontSize="2xl">
             Rp. {product.price.toLocaleString("id-ID")}
           </Text>
+          <Button onClick={routeChange} colorScheme="facebook">
+            Buy Now!
+          </Button>
         </Stack>
       </CardBody>
     </Card>

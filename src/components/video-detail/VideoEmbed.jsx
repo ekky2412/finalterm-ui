@@ -3,7 +3,7 @@ import { AspectRatio } from "@chakra-ui/react";
 
 const VideoEmbed = ({ urlVideo }) => {
   return (
-    <AspectRatio w="100%" maxHeight="80%">
+    <AspectRatio w="100%" maxHeight="60%">
       <iframe
         src={urlVideo}
         title="YouTube video player"
