@@ -23,7 +23,7 @@ const SearchPage = () => {
     return <VideoCard key={index} video={video}></VideoCard>;
   };
 
-  const videosCard = videos.map((video, index) => VideoRow(video, index));
+  const videosCard = videos.map((video, index = 10) => VideoRow(video, index));
 
   return (
     <div>

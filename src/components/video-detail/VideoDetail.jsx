@@ -36,7 +36,14 @@ const VideoDetail = () => {
       console.log(comments);
       setComments(comments);
     });
-  }, [products, video, comments]);
+  }, []);
+
+  useEffect(() => {
+    getComments(id).then((comments) => {
+      // console.log(comments);
+      setComments(comments);
+    });
+  }, [comments]);
 
   function handleSendComments() {
     const newComment = {
