@@ -39,6 +39,20 @@ const VideoDetail = () => {
   }, []);
 
   useEffect(() => {
+    getProducts(id).then((products) => {
+      console.log(products);
+      setProducts(products);
+    });
+
+    getVideo(id).then((video) => {
+      setVideo({
+        ...video,
+        urlVideo: video.urlVideo.replace("/watch?v=", "/embed/"),
+      });
+    });
+  }, [products, video]);
+
+  useEffect(() => {
     getComments(id).then((comments) => {
       // console.log(comments);
       setComments(comments);
