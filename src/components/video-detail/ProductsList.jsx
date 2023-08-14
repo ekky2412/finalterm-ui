@@ -21,7 +21,7 @@ const ProductsList = ({ product }) => {
       border="1px"
       maxW="lg"
       maxHeight="80%"
-      overflowY="hidden"
+      overflowY="scroll"
     >
       <CardBody>
         <Image
