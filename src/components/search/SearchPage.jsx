@@ -23,7 +23,11 @@ const SearchPage = () => {
     return <VideoCard key={index} video={video}></VideoCard>;
   };
 
-  const videosCard = videos.map((video, index = 10) => VideoRow(video, index));
+  const videosCard = videos.hasOwnProperty("message") ? (
+    <div>Data not found</div>
+  ) : (
+    videos.map((video, index) => VideoRow(video, index))
+  );
 
   return (
     <div>
